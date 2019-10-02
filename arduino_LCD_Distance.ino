@@ -74,10 +74,11 @@ void loop()
   lcd.print("Distance: "); // Prints string "Distance" on the LCD
   lcd.print(distanceCm); // Prints the distance value from the sensor
   lcd.print(" cm");
-  delay(20);
+  //delay(20);  // not necessary
   lcd.setCursor(0, 1);
   lcd.print("Distance: ");
   lcd.print(distanceInch);
   lcd.print(" inch");
-  delay(20);
+  delay(300);  
+  lcd.clear();
 }
