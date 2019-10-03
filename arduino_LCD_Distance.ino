@@ -24,8 +24,8 @@ const int trigPin = 2;
 const int echoPin = 3;
 //variables
 long duration;
-int distanceCm, distanceInch;
-
+// int distanceCm, distanceInch;
+float distanceCm, distanceInch;
 
 void setup()
 {
@@ -71,14 +71,14 @@ void loop()
   distanceCm = duration * 0.034 / 2;
   distanceInch = duration * 0.0133 / 2;
   lcd.setCursor(0, 0); // Sets the location at which subsequent text written to the LCD will be displayed
-  lcd.print("Distance: "); // Prints string "Distance" on the LCD
+  lcd.print("Dist: "); // Prints string "Distance" on the LCD
   lcd.print(distanceCm); // Prints the distance value from the sensor
   lcd.print(" cm");
-  //delay(20);  // not necessary
+  //delay(20);
   lcd.setCursor(0, 1);
-  lcd.print("Distance: ");
+  lcd.print("      ");
   lcd.print(distanceInch);
   lcd.print(" inch");
-  delay(300);  
+  delay(300);
   lcd.clear();
 }
